@@ -1,7 +1,0 @@
-codeforces.com
-cdn-mathjax.codeforces.com
-cdn.codeforces.com
-codeforces.org
-fonts.googleapis.com
-fonts.gstatic.com
-ssl.google-analytics.com
