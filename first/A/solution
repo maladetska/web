@@ -1,4 +1,0 @@
-#!/bin/bash
-
-curl http://wp.codeforces.com/1d1p/ --head
-curl --header 'X-Secret: 6ff6b3' http://wp.codeforces.com/1d1p/ > answer.txt
