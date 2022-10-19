@@ -136,7 +136,7 @@ main .datatable tbody tr:nth-child(2n-1) {
 
 /* </TASK B: DATATABLE> */
 
-/* <TASK C: DATATABLE> */
+/* <TASK C: BLOG> */
 main article .title {
     color: var(--caption-color);
     font-size: 1.4rem;
@@ -197,7 +197,7 @@ main .footer .left span {
     font-weight: bold;
 }
 
-/* </TASK C: DATATABLE> */
+/* </TASK C: BLOG> */
 
 /* <TASK D: LOGIN FORM> */
 main .login-form-box {
