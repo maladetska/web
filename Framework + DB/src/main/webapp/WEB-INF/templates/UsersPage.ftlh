@@ -14,11 +14,11 @@
             </thead>
             <tbody>
             <#list users as user>
-            <tr>
-                <td>${user.id}</td>
-                <td>${user.login}</td>
-                <td>${user.creationTime}</td>
-            </tr>
+                <tr>
+                    <td>${user.id}</td>
+                    <td>${user.login}</td>
+                    <td>${user.creationTime}</td>
+                </tr>
             </#list>
             </tbody>
         </table>

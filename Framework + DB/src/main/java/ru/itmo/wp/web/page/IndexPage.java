@@ -1,4 +1,4 @@
-package ru.itmo.wp.web.page;
+/*package ru.itmo.wp.web.page;
 
 import com.google.common.base.Strings;
 
@@ -18,4 +18,10 @@ public class IndexPage {
             request.getSession().removeAttribute("message");
         }
     }
+}*/
+
+package ru.itmo.wp.web.page;
+
+@SuppressWarnings({"unused"})
+public class IndexPage extends Page {
 }

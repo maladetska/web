@@ -70,14 +70,27 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public void validateEnter(String loginOrEmail, String password) throws ValidationException {
-        User user = userRepository.findByLoginOrEmailAndPasswordSha(loginOrEmail, getPasswordSha(password));
+    public User validateEnter(String loginOrEmail, String password) throws ValidationException {
+        //User user = userRepository.findByLoginOrEmailAndPasswordSha(loginOrEmail, getPasswordSha(password));
+        User user = loginOrEmail.matches("[a-z]+") ?
+                findByLoginAndPassword(loginOrEmail, password) :
+                findByEmailAndPassword(loginOrEmail, password);
         if (user == null) {
             throw new ValidationException("Invalid login/email or password");
         }
+
+        return user;
     }
 
-    public User findByLoginOrEmailAndPassword(String loginOrEmail, String password) {
-        return userRepository.findByLoginOrEmailAndPasswordSha(loginOrEmail, getPasswordSha(password));
+    public User findByLoginAndPassword(String login, String password) {
+        return userRepository.findByLoginAndPasswordSha(login, getPasswordSha(password));
+    }
+
+    public User findByEmailAndPassword(String email, String password) {
+        return userRepository.findByEmailAndPasswordSha(email, getPasswordSha(password));
+    }
+
+    public long findCount() {
+        return userRepository.findCount();
     }
 }
